@@ -10,7 +10,8 @@ Wine quality prediction application.
 	- LICENSE
 
 2.Clone the repository to local machine.
-    <git clone <repository url>>
+
+    <git clone 'repository url'>
 
 3.Create a set up file.
     
