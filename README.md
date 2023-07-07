@@ -4,6 +4,7 @@ Wine quality prediction application.
 ## Steps to start a project
 
 1.Create a git repository for the project.
+
 	- .gitignore
 	- README.md
 	- LICENSE
@@ -13,6 +14,7 @@ Wine quality prediction application.
 3.Create a set up file.
     
 4.Create a requirements.txt file.
+
 	<pandas,
     scikit-learn,
     seaborn,
@@ -21,5 +23,6 @@ Wine quality prediction application.
     -e .>
 
 5.Install Packages from the requirements.txt file.
+
     <pip install -r requirements.txt>
 
