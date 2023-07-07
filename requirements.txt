@@ -1,0 +1,6 @@
+pandas 
+seaborn
+scikit-learn
+streamlit
+# to automatically triger setup.py 
+-e .
