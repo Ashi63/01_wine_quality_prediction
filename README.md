@@ -44,4 +44,12 @@ Wine quality prediction application.
 
     <pip install -r requirements.txt>
 
+7.Make 'artifacts' dir to store  which will be created during the project.
+    
+    - data_source
+        - raw_data
+        - training_data
+        - testing_data
+    - models
+
 
