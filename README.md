@@ -24,7 +24,24 @@ Wine quality prediction application.
     #### this -e . is so that setup.py file will also run when ever we intall the requirements.txt file.
     -e .>
 
-5.Install Packages from the requirements.txt file.
+5.Create a src folder with the __init__.py file in it.
+
+    - __init__.py
+    - components
+        - __init__.py
+        - data_ingestion.py
+        - data_transformation.py
+        - model_training.py
+    - pipeline
+        - __init__.py
+        - training_pipeline.py
+        - prediction_pipeline.py
+    - exception.py
+    - logger.py
+    - utils.py
+
+6.Install Packages from the requirements.txt file.
 
     <pip install -r requirements.txt>
+
 
