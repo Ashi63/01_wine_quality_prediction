@@ -18,8 +18,8 @@ Wine quality prediction application.
 	<pandas,
     scikit-learn,
     seaborn,
-    streamlit
-    # this -e . is so that setup.py file will also run when ever we intall the requirements.txt file.
+    streamlit>
+    #### this -e . is so that setup.py file will also run when ever we intall the requirements.txt file.
     -e .>
 
 5. Install Packages from the requirements.txt file.
