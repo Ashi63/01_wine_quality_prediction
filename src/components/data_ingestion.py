@@ -20,9 +20,13 @@ class DataIngestion:
         self.ingestion_config = DataIngestionConfig()
     
     def initiate_data_ingestion(self):
+        # loading the raw data.
         df = pd.read_csv(self.ingestion_config.raw_data_file_path)
-        df.drop(['Id'],axis=1)
+        # droping the Id column from data set as it will not contribute to model building.
+        df = df.drop(['Id'],axis=1)
+        # dividing the data into training and test data sets.
         training_data,testing_data = train_test_split(df,test_size=0.2,random_state=0)
+        # saving the training and testing data to disk for further processing.
         if 'training_data' not in os.listdir(data_source_path):
             os.mkdir(data_source_path /'training_data')
             training_data.to_csv(self.ingestion_config.training_data_file_path,index=False)

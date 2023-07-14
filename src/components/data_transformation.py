@@ -24,7 +24,7 @@ class DataTransformation:
         df_training = pd.read_csv(self.transformation_config.training_data_file_path)
         
         # removing the 'Id' column
-        df_training_transformed = df_training.drop(['Id'],axis=1)
+        #df_training_transformed = df_training.drop(['Id'],axis=1)
         
         # checking for null values.
         #print('Null values in training data set: ',df_training_transformed.isnull().sum())
@@ -33,7 +33,7 @@ class DataTransformation:
         for i in df_training.isnull().sum():
             if i == 0:
                 #print(f"No null values found.")
-                pass
+                df_training_transformed = df_training
             else:
                 null_imputer = SimpleImputer(strategy='mean')
                 df_training_transformed = null_imputer.fit_transform(df_training)

@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 from dataclasses import dataclass
 from src.utils import *
-from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LogisticRegression
 import pickle
 
 
@@ -13,7 +13,6 @@ class ModelTrainingConfig:
     X_test_file_path = X_test_file_path
     y_train_file_path = y_train_file_path
     y_test_file_path = y_test_file_path
-    y_predict_file_path = y_predict_file_path
     trained_model_file_path = trained_model_file_path
     
 class ModelTraining:
@@ -28,15 +27,14 @@ class ModelTraining:
         y_test = pd.read_csv(self.model_training_config.y_test_file_path)
         
         # building the model
-        model  = LinearRegression()
+        model  = LogisticRegression()
         model.fit(X_train,y_train)
-        pickle.dump(model,open(self.model_training_config.trained_model_file_path,'wb'))
-        
-        
-        y_predict = model.predict(X_test)
-        y_predict = pd.DataFrame(y_predict, columns=['Predictions'])
-        y_predict.to_csv(y_predict_file_path,index=False)
-        
+        if 'Models' not in os.listdir(artifacts_path):
+            os.mkdir(artifacts_path/'models')
+            pickle.dump(model,open(self.model_training_config.trained_model_file_path,'wb'))
+        else:
+            pickle.dump(model,open(self.model_training_config.trained_model_file_path,'wb'))
+
         
 if __name__ == '__main__':
     obj1 = ModelTraining()
