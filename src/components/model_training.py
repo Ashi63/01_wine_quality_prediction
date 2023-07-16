@@ -35,9 +35,9 @@ class ModelTraining:
         else:
             pickle.dump(model,open(self.model_training_config.trained_model_file_path,'wb'))
 
-        
+'''        
 if __name__ == '__main__':
     obj1 = ModelTraining()
     obj1.initiate_model_training()
-    
+'''    
         

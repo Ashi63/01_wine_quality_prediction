@@ -73,7 +73,8 @@ class DataTransformation:
             y_test.to_csv(self.transformation_config.y_test_file_path,index=False)
             
     
-
+'''
 if __name__=="__main__":
     obj1 = DataTransformation()
     obj1.initiate_data_transformation()
+'''

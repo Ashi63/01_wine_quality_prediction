@@ -29,9 +29,11 @@ class Prediction:
             prediction.to_csv(self.prediction_config.prediction_file_path,index=False)
         else:
             prediction.to_csv(self.prediction_config.prediction_file_path,index=False)
+        return prediction
+    
         
-        
+'''
 if __name__=='__main__':
     obj1= Prediction()
     obj1.predict()    
-    
+'''    

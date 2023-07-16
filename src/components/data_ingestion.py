@@ -9,11 +9,11 @@ import os
   
 @dataclass
 class DataIngestionConfig:
-    raw_data_file_path = raw_data_file_path
-    training_data_path =  training_data_path
+    raw_data_file_path      = raw_data_file_path
+    training_data_path      =  training_data_path
     training_data_file_path = training_data_path /'training_data.csv'
-    testing_data_path = testing_data_path
-    testing_data_file_path = testing_data_path /'testing_data.csv'
+    testing_data_path       = testing_data_path
+    testing_data_file_path  = testing_data_path /'testing_data.csv'
     
 class DataIngestion:
     def __init__(self):
@@ -34,7 +34,8 @@ class DataIngestion:
             os.mkdir(data_source_path / 'testing_data')
             testing_data.to_csv(self.ingestion_config.testing_data_file_path,index=False)
             
-
+'''
 if __name__ == '__main__':
     obj = DataIngestion()
     obj.initiate_data_ingestion()
+'''

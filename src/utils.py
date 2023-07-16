@@ -15,7 +15,13 @@ X_train_file_path       = transformed_data_path/'X_train_data.csv'
 X_test_file_path        = transformed_data_path/'X_test_data.csv'
 y_train_file_path       = transformed_data_path/'y_train_data.csv'
 y_test_file_path        = transformed_data_path/'y_test_data.csv'
-prediction_path         = artifacts_path/'predictions'
-prediction_file_path    = prediction_path/'predictions.csv'
 trained_model_path      = artifacts_path/ 'models'
 trained_model_file_path = trained_model_path /'model.pkl'
+
+
+prediction_file_path    = artifacts_path/'predictions'
+prediction_from_file    = prediction_file_path/'predictions_from_file'
+prediction_from_file_path = prediction_from_file/'prediction.csv'
+
+prediction_from_manual  = prediction_file_path/'prediction_from_manual'
+prediction_from_manual_path = prediction_from_manual/'prediction.csv'
