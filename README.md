@@ -1,4 +1,4 @@
-![alt text]('C:\Users\Alkashi\Desktop\demo_ds_apps\01_wine_quality_prediction\documents\images\wq.jpg')
+## Wine Quality Prediction Application 
 
 **Description:**
 
