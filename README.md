@@ -1,5 +1,7 @@
 ## Wine Quality Prediction Application 
 
+![Alt text](/documents/images/wq.jpg)
+
 **Description:**
 
 
