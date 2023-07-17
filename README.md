@@ -49,3 +49,7 @@
             **Output variable (based on sensory data):**
                 
             12. quality (score between 0 and 10)
+
+**Application**
+
+![Alt text](/documents/images/app_home_page.png)
