@@ -1,4 +1,4 @@
-Description:
+**Description:**
 
 '''
             This datasets is related to red variants of the Portuguese "Vinho Verde" wine.
@@ -6,11 +6,11 @@ Description:
             The datasets can be viewed as classification or regression tasks. The classes are ordered and not balanced (e.g. there are much more normal wines than excellent or poor ones).
 '''
 
-Task: 
+**Task:** 
 
 '''Your task is to predict the quality of wine using the given data.'''
 
-'Objective:'
+**Objective:**
 
 '''
 
@@ -21,8 +21,8 @@ Task:
             - Also fine-tune the hyperparameters & compare the evaluation metrics of various classification algorithms.
 '''
 
-'''
-            ### This data frame contains the following columns:
+
+**This data frame contains the following columns:**
 
             **Input variables (based on physicochemical tests):**
                 
@@ -41,4 +41,3 @@ Task:
             **Output variable (based on sensory data):**
                 
             12. quality (score between 0 and 10)
-'''
