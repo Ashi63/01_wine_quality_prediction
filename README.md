@@ -53,3 +53,9 @@
 **Application**
 
 ![Alt text](/documents/images/app_home_page.png)
+
+![Alt text](/documents/images/batch_prediction.png)
+
+![Alt text](/documents/images/manual_prediction.png)
+
+![Alt text](/documents/images/see_prediction.png)

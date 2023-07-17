@@ -7,7 +7,7 @@ from dataclasses import dataclass
 import os
 
 
-st.title('Wine Predictions uploading the file.')
+st.title('Predict uploading the batch file.')
 st.sidebar.success('Upload your batch file to be Predicted.')
 st.divider()
 
