@@ -1,12 +1,16 @@
 import streamlit as st
 import pandas as pd
 from src.utils import *
+from PIL import Image
 
 
 st.set_page_config(page_title='Wine Prediction')
 st.title('Wine Prediction Application.')
 st.sidebar.success('Select Any Page.')
 
+st.divider()
+image = Image.open(image_file_path)
+st.image(image,caption='Wine Prediction.')
 st.divider()
 st.subheader('Description:')
 st.markdown('''

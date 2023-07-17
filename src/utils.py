@@ -25,3 +25,7 @@ prediction_from_file_path = prediction_from_file/'prediction.csv'
 
 prediction_from_manual  = prediction_file_path/'prediction_from_manual'
 prediction_from_manual_path = prediction_from_manual/'prediction.csv'
+
+documents_dir_path = project_dir_path/'documents'
+image_file_dir = documents_dir_path/'images'
+image_file_path = image_file_dir/'wq.jpg'
