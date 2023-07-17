@@ -8,6 +8,11 @@ from src.utils import *
 from dataclasses import dataclass
 import os
 
+
+st.title('Wine Quality Prediction Manually.')
+st.sidebar.success('Enter the data for the wine.')
+st.divider()
+
 @dataclass
 class Features:
     fixed_acidity = st.number_input('fixed acidity')
@@ -22,7 +27,10 @@ class Features:
     sulphates = st.number_input('sulphates')
     alcohol = st.number_input('alcohol')
     trained_model_file_path = trained_model_file_path
-
+    prediction_file_path = prediction_file_path
+    prediction_from_manual_path = prediction_from_manual_path
+    prediction_from_manual = prediction_from_manual
+    
 class PredictManually:
     def __init__(self):
         self.predict_manual_config = Features()
@@ -48,44 +56,34 @@ class PredictManually:
                                         'pH', 'sulphates', 'alcohol']
         sample = pd.DataFrame(sample,columns=columns)
         return sample
+       
+    def create_predictions_from_manual_folder(self):
+        if self.predict_manual_config.prediction_from_manual not in os.listdir(self.predict_manual_config.prediction_file_path):
+            os.makedirs(self.predict_manual_config.prediction_from_manual,exist_ok=True)
+    
+    def save_predicted_file(self):
+        self.create_predictions_from_manual_folder()
+        sample_df = self.record_sample()
+        predictions = self.predict_manually()
+        result_file = pd.concat([sample_df, predictions],axis=1)
+        #st.dataframe(result_file)
+        result_file.to_csv(self.predict_manual_config.prediction_from_manual_path,index=False)
+        return result_file
         
 st.divider()
 
-def get_sample_prediction_manual():
-    obj2 = PredictManually()
-    sample = obj2.record_sample()
-    #st.dataframe(sample)
+
+
+if st.button('Predict and Save the file.'):
+    st.divider()
     obj1 = PredictManually()
-    prediction_manual = obj1.predict_manually()
-    #st.dataframe(prediction_manual) 
-    return sample,prediction_manual
+    test_sample_df = obj1.record_sample()
+    #st.dataframe(test_sample_df)
+    prediction = obj1.predict_manually()
+    #st.dataframe(prediction)
+    result_df = obj1.save_predicted_file()
+    st.write('Your predicted result.')
+    st.dataframe(result_df)
+    st.success('Prediction Record Saved Successfully as csv file.')
 
-
-
-
-if st.button('Show the record and make prediction'):
-    obj2 = PredictManually()
-    sample = obj2.record_sample()
-    st.dataframe(sample)   
-    
-    obj1 = PredictManually()
-    prediction_manual = obj1.predict_manually()
-    st.dataframe(prediction_manual)
-    
-
-
-if st.button('Save the Prediction.'):
-    sample,prediction_manual = get_sample_prediction_manual()
-    result_file = pd.concat([sample,prediction_manual],axis=1)
-    st.dataframe(result_file)
-        
-    if 'prediction_from_manual' not in os.listdir(prediction_file_path):
-        os.mkdir(prediction_file_path/'prediction_from_manual')
-        result_file.to_csv(prediction_from_manual_path)
-        st.write('Result file saved successfully.')
-
-
-
-
-    #st.dataframe(result_file)
 
