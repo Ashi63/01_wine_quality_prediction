@@ -1,7 +1,8 @@
 import os
 from pathlib import Path
 
-project_dir_path        = Path('C:/Users/Alkashi/Desktop/demo_ds_apps/01_wine_quality_prediction/')
+#project_dir_path        = Path('C:/Users/Alkashi/Desktop/demo_ds_apps/01_wine_quality_prediction/')
+project_dir_path        = Path('/home/ec2-user/')
 artifacts_path          = project_dir_path/'artifacts'
 data_source_path        = artifacts_path /'data_source'
 training_data_path      = data_source_path/'training_data'
