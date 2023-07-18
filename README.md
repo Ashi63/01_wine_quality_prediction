@@ -66,13 +66,18 @@
 - SSH to your instance
         - install python using command 
         '''sudo yum install python3'''
+
         - check the version of python installed 
         '''python3 -V'''
+        
         - create a environment for the application 
         '''python -m venv .venv'''
+        
         - activate the environment 
         '''source .venv/bin/activate'''
+        
         - install all the packages using the requirements.txt file 
         '''pip3 install -r requirements.txt'''
+        
         - to run the application
          '''streamlit run application.py'''
