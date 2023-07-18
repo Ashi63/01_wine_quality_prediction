@@ -83,3 +83,23 @@
         
         - to run the application
          '''streamlit run application.py'''
+
+- Copy the public IP and run in web browser.
+
+- If you close the SSH session application will stop running.
+
+- Way around is when you before running the 
+        '''streamlit run application.py''' 
+
+        - Run following command 
+                - '''screen'''
+
+                - press Ctrl+A after that Ctrl+D
+
+                - then run 
+                '''streamlit run application.py'''
+
+                - this will keep your application running
+
+- If you want to go back and resume the SSH session, login to SSH session and give command
+                - '''screen -r'''
