@@ -64,6 +64,8 @@
 - Create a EC2 instance(Amazon Linux) in AWS.
 - Upload the project files to the instance (using WinSCP tool).
 - SSH to your instance
+
+
         - install python using command 
         '''sudo yum install python3'''
 
