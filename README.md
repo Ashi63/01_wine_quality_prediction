@@ -1,4 +1,4 @@
-## Wine Quality Prediction Application 
+## Wine Quality Prediction Application deployment in AWS EC2 instance
 
 ![Alt text](/documents/images/wq.jpg)
 
